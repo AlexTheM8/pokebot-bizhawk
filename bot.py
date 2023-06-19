@@ -2144,7 +2144,7 @@ try:
     url=f"http://{FLASK_HOST}:{FLASK_PORT}/dashboard"
     window = webview.create_window("PokeBot", url=url, width=1280, height=720, resizable=True, hidden=False, frameless=False, easy_drag=True, fullscreen=False, text_select=True, zoomable=True)
     window.events.closed += on_window_close
-    webview.start()
+    webview.start(storage_path="D:/Projects/resources/webview-storage")
 
 except Exception as e:
     debug_log.exception(str(e))
